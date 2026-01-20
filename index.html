@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+    </style>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "KnNUj4UmzS6B_7IoJ",
+            });
+        })();
+    </script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+
+    <!-- MOBILE TOP BAR -->
+    <header class="MobileBar">
+        <button class="OpenNavBarBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="MobileNav">
+            ☰
+        </button>
+
+        <h1>Ace's Portfolio</h1>
+    </header>
+
+    <!-- MOBILE SLIDE NAV -->
+    <nav id="MobileNav" class="MobileNav">
+        <ul>
+            <li><button class="NavBtn" data-target="Home">Home</button></li>
+            <li><button class="NavBtn" data-target="About">About</button></li>
+            <li><button class="NavBtn" data-target="Skills">Skills</button></li>
+            <li><button class="NavBtn" data-target="Projects">Projects</button></li>
+            <li><button class="NavBtn" data-target="Contact">Contact</button></li>
+        </ul>
+    </nav>
+
+    <!-- DESKTOP NAV -->
+    <nav class="DesktopNav">
+        <h1>Ace's Portfolio</h1>
+        <ul>
+            <li><button class="NavBtn" data-target="Home">Home</button></li>
+            <li><button class="NavBtn" data-target="About">About</button></li>
+            <li><button class="NavBtn" data-target="Skills">Skills</button></li>
+            <li><button class="NavBtn" data-target="Projects">Projects</button></li>
+            <li><button class="NavBtn" data-target="Contact">Contact</button></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- HOME SCREEN -->
+        <section class="Hero Active" id="Home">
+            <img class="Hero-Img" src="me.jpeg" alt="Duck PFP">
+
+            <div class="Hero-Text">
+                <h2>Hey There! I'm Aniketh Gurung</h2>
+                <p>
+                    I enjoy building software, experimenting with and learning modern technologies.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ABOUT SCREEN -->
+        <section class="Hero" id="About">
+            <img class="Hero-Img" src="me.jpeg" alt="My PFP">
+
+            <div class="Hero-Text">
+                <h2>About me:</h2>
+                <p>
+                    An aspiring Spring Boot developer with a strong interest in designing scalable and maintainable
+                    backend applications. Proficient in Core Java, Spring Boot, and RESTful API development, with a
+                    solid foundation in backend architecture. Brings strong problem-solving skills and the ability
+                    to collaborate effectively in team-oriented environments.
+                </p>
+            </div>
+        </section>
+
+        <!-- SKILLS SCREEN -->
+        <section class="Hero" id="Skills">
+            <img src="skills_img.jpg" alt="Skills Img" class="Hero-Img">
+
+            <div class="Hero-Text">
+                <h2>Skills:</h2>
+                <ol>
+                    <li>
+                        <strong>Programming Languages</strong>
+                        <ul>
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <strong>Web Technologies</strong>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <strong>Frameworks & Libraries</strong>
+                        <ul>
+                            <li>
+                                Spring Boot
+                                <ul>
+                                    <li>Spring MVC</li>
+                                    <li>Spring Security</li>
+                                    <li>Spring Data JPA</li>
+                                </ul>
+                            </li>
+                            <li>Hibernate</li>
+                            <li>React.js</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <strong>Databases</strong>
+                        <ul>
+                            <li>MySQL</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <strong>API & Development Tools</strong>
+                        <ul>
+                            <li>Postman</li>
+                            <li>Maven</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <strong>Backend & API Development</strong>
+                        <ul>
+                            <li>RESTful API Design</li>
+                            <li>Backend Architecture (Foundational)</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <strong>Tools & Platforms</strong>
+                        <ul>
+                            <li>Git & GitHub</li>
+                            <li>Vercel</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- PROJECTS SCREEN -->
+        <section class="Hero" id="Projects">
+
+            <button class="DesktopSliderBtns" data-direction="Prev">&lt;</button>
+
+            <article class="Projects-Container Active">
+                <img class="Project-Img" src="calc.png" alt="Calc Img">
+                <div class="Project-Desc">
+                    <p>Name: Basic Calculator</p>
+                    <p>URL: <a target="_blank"
+                            href="https://basic-calculator-gdkswejoi-aces-projects-81f602bc.vercel.app/">View Live
+                            Demo →</a></p>
+                    <p>Git Repo: <a target="_blank" href="https://github.com/YaBoiAce007/Basic-Calculator">View source
+                            code
+                            →</a></p>
+                </div>
+            </article>
+
+            <article class="Projects-Container">
+                <img class="Project-Img" src="ttt.png" alt="TTT Img">
+                <div class="Project-Desc">
+                    <p>Name: Tic-Tac-Toe</p>
+                    <p>URL: <a target="_blank" href="https://tic-tac-toe-psi-plum-97.vercel.app/">View Live
+                            Demo →</a></p>
+                    <p>Git Repo: <a target="_blank" href="https://github.com/YaBoiAce007/Tic-Tac-Toe">View source code
+                            →</a></p>
+                </div>
+            </article>
+
+            <button class="DesktopSliderBtns" data-direction="Next">&gt;</button>
+
+            <div class="MobileSliderBtns">
+                <button data-direction="Prev">&lt;</button>
+                <button data-direction="Next">&gt;</button>
+            </div>
+        </section>
+
+        <!-- CONTACT SCREEN -->
+        <section class="Hero Contact" id="Contact">
+            <div class="Hero-Text">
+                <h1>Let’s connect.</h1>
+                <p>Have a question, an idea, or an opportunity to discuss?</p>
+                <p>Send a message using the form and I’ll
+                    respond shortly.</p>
+            </div>
+            <form action="" class="Contact-Form">
+                <h1>Contact</h1>
+                <h3>All the fields are required</h3>
+                <input class="Contact-Field" type="text" id="name" name="name" placeholder="Name" required>
+                <input class="Contact-Field" type="email" id="email" name="email" placeholder="Email" required>
+                <textarea class="Contact-Field" rows="5" id="message" name="message" placeholder="Message"
+                    required></textarea>
+                <button type="submit" class="Submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="func.js"></script>
+</body>
+
+</html>

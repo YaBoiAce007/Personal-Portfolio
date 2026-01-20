@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+.MobileBar {
+    display: none;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    color: white;
+    width: 100vw;
+    height: 10vh;
+    align-items: center;
+    gap: 2rem;
+    z-index: 1;
+}
+
+.MobileNav {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    position: fixed;
+    height: 90vh;
+    width: 33vw;
+    transform: translateX(-100%);
+    transition: transform .25s ease-out;
+    z-index: 2;
+}
+
+.MobileNav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.MobileNav.Open {
+    transform: translateX(0);
+}
+
+.DesktopNav {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background: black;
+    z-index: 1;
+}
+
+.DesktopNav ul {
+    display: flex;
+    width: 25%;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.NavBtn,
+.OpenNavBarBtn {
+    all: unset;
+    display: block;
+    cursor: pointer;
+    padding: .5rem;
+    border-radius: 25px;
+    transition: background .25s ease-out, transform .25s ease-out;
+}
+
+main {
+    width: 100vw;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Hero {
+    display: none;
+}
+
+.Hero.Active {
+    display: flex;
+    margin-top: 3vh;
+    min-width: 80vw;
+    min-height: 80vh;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    animation: ActiveHeroDisplay .25s ease-out forwards;
+}
+
+.Hero-Img,
+.Project-Img {
+    width: 25rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+.Hero-Text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Projects-Container {
+    display: none;
+}
+
+.Projects-Container.Active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: ActiveProjectDisplay .25s ease-out forwards;
+    gap: 3rem;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+}
+
+.Project-Desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.MobileSliderBtns {
+    display: none;
+    gap: 3rem;
+}
+
+.DesktopSliderBtns,
+.MobileSliderBtns button, .Submit {
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    display: block;
+    padding: .5rem;
+    border-radius: 999px;
+    transition: transform .25s ease-out, background .25s ease-out;
+}
+
+.Submit{
+    font-size: unset
+}
+
+.OpenNavBarBtn,
+.DesktopSliderBtns,
+.MobileSliderBtns button {
+    border-radius: 999px;
+}
+
+@media (hover:hover) and (pointer:fine) {
+
+    .NavBtn:hover,
+    .OpenNavBarBtn:hover,
+    .DesktopSliderBtns:hover,
+    .MobileSliderBtns button:hover, .Submit:hover {
+        background: white;
+        color: black;
+        transform: translateY(-.25rem);
+    }
+}
+
+.NavBtn:active,
+.OpenNavBarBtn:active,
+.DesktopSliderBtns:active,
+.MobileSliderBtns:active, .Submit:active {
+    background: white;
+    color: black;
+    transform: translateY(-.25rem);
+}
+
+.Hero.Contact.Active{
+    flex-direction: row;
+    gap: 0;
+}
+
+.Hero.Contact .Hero-Text{
+    height: 80vh;
+    width: 45vw;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    background-color: black;
+    border-radius: 25px;
+}
+
+.Contact-Form{
+    display: flex;
+    width: 45vw;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Contact-Field{
+    width: 40vw;
+    border: 2px solid black;
+    padding: .5rem;
+    border-radius: 25px;
+}
+
+textarea.Contact-Field{
+    resize: none;
+}
+
+@keyframes ActiveHeroDisplay {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes ActiveProjectDisplay {
+    from {
+        opacity: 0;
+        transform: scale(.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 790px) {
+
+    .DesktopNav {
+        display: none;
+    }
+
+    .MobileBar {
+        display: flex;
+    }
+
+    .Hero.Active {
+        flex-direction: column;
+    }
+
+    .Hero-Img,
+    .Project-Img {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .DesktopSliderBtns {
+        display: none;
+    }
+
+    .MobileSliderBtns {
+        display: flex;
+    }
+
+    .Projects-Container.Active {
+        flex-direction: column;
+    }
+
+}
+
+::selection {
+    background-color: aquamarine;
+    color: rgb(209, 76, 32);
+}
+
+/* *{
+    border: none !important;
+} */
