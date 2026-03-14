@@ -44,6 +44,40 @@ The website is deployed using **Vercel**.
 Live URL:  
 https://personal-portfolio-rho-three-33.vercel.app/
 
+## Running the Project Locally
+
+To run this project on your local machine, follow the steps below:
+
+### 1. Clone the Repository
+
+Open a terminal (Command Prompt, PowerShell, Git Bash, or the terminal in VS Code) and run:
+
+```bash
+git clone https://github.com/YaBoiAce007/Personal-Portfolio.git
+```
+
+### 2. Navigate to the Project Folder
+
+```bash
+cd Personal-Portfolio
+```
+
+### 3. Open the Website
+
+Locate the `index.html` file inside the project folder.
+
+You can run the project by:
+
+- Double-clicking the **index.html** file, or
+- Right-clicking → **Open with** → your preferred web browser
+
+Examples of supported browsers:
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
+
+The portfolio website will open in your browser.
+
 ## Purpose
 
 This project was created to build a personal online presence and provide a centralized place to showcase my technical skills and projects.
